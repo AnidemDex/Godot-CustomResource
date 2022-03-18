@@ -1,10 +1,7 @@
 tool
 extends EditorPlugin
 
+# Q: Why is this file empty Dex?
+# A: I'm not being paying enough to fill this script
 
-func _enter_tree() -> void:
-	pass
-
-
-func _exit_tree() -> void:
-	pass
+# jk, is not necessary
