@@ -9,7 +9,7 @@ extends ResourceFormatLoader
 class_name CustomResFormatLoader
 
 # Preload to avoid problems with project.godot
-const CustomResClass = preload("res://addons/custom_resource/resource_class.gd")
+const PlainTextClass = preload("res://addons/custom_resource/plain_text_resource.gd")
 
 # Dude, look at the docs, I'm not going to explain each function... 
 # Specially when they are self explainatory...
@@ -51,7 +51,7 @@ func load(path: String, original_path: String):
 	
 	var err:int
 	
-	var res := CustomResClass.new()
+	var res := PlainTextClass.new()
 	
 	err = file.open(path, File.READ)
 	if err != OK:
@@ -60,6 +60,8 @@ func load(path: String, original_path: String):
 		return err
 	
 	res.text = file.get_as_text()
+	
+	file.close()
 	# Everything went well, and you parsed your file data into your resource. Life is good, return it
 	return res
 

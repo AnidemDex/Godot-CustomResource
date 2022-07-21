@@ -1,6 +1,6 @@
 tool
 extends Resource
-class_name CustomRes
+class_name PlainTextResource
 
 # This is our resource, I'll expose the text property
 # That property is just an string, we don't need anything special here.

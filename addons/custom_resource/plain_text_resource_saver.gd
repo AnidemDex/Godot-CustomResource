@@ -3,7 +3,7 @@ extends ResourceFormatSaver
 class_name CustomResFormatSaver
 
 # Preload to avoid problems with project.godot
-const CustomResClass = preload("res://addons/custom_resource/resource_class.gd")
+const PlainTextClass = preload("res://addons/custom_resource/plain_text_resource.gd")
 
 
 func get_recognized_extensions(resource: Resource) -> PoolStringArray:
@@ -17,7 +17,7 @@ func get_recognized_extensions(resource: Resource) -> PoolStringArray:
 # You let other ResourceFormatSaver deal with it.
 func recognize(resource: Resource) -> bool:
 	# Cast instead of using "is" keyword in case is a subclass
-	resource = resource as CustomResClass
+	resource = resource as PlainTextClass
 	
 	if resource:
 		return true
