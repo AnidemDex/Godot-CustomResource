@@ -70,7 +70,7 @@ func set_data(value:Dictionary) -> void:
 
 func _get_property_list() -> Array:
 	var p := []
-	p.append({"name":"_data", "type":TYPE_DICTIONARY, "usage":PROPERTY_USAGE_DEFAULT})
+	p.append({"name":"_data", "type":TYPE_DICTIONARY, "usage":PROPERTY_USAGE_NOEDITOR})
 	
 	p = _create_property_list(_data, p)
 	return p
