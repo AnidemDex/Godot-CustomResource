@@ -9,25 +9,43 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Resource",
-"class": "CustomRes",
-"language": "GDScript",
-"path": "res://addons/custom_resource/resource_class.gd"
-}, {
 "base": "ResourceFormatLoader",
 "class": "CustomResFormatLoader",
 "language": "GDScript",
-"path": "res://addons/custom_resource/resource_loader.gd"
+"path": "res://addons/custom_resource/plain_text_resource_loader.gd"
 }, {
 "base": "ResourceFormatSaver",
 "class": "CustomResFormatSaver",
 "language": "GDScript",
-"path": "res://addons/custom_resource/resource_saver.gd"
+"path": "res://addons/custom_resource/plain_text_resource_saver.gd"
+}, {
+"base": "Resource",
+"class": "JSONResource",
+"language": "GDScript",
+"path": "res://addons/custom_resource/json_resource.gd"
+}, {
+"base": "ResourceFormatLoader",
+"class": "JSONResourceLoader",
+"language": "GDScript",
+"path": "res://addons/custom_resource/json_resource_loader.gd"
+}, {
+"base": "ResourceFormatSaver",
+"class": "JsonResourceSaver",
+"language": "GDScript",
+"path": "res://addons/custom_resource/json_resource_saver.gd"
+}, {
+"base": "Resource",
+"class": "PlainTextResource",
+"language": "GDScript",
+"path": "res://addons/custom_resource/plain_text_resource.gd"
 } ]
 _global_script_class_icons={
-"CustomRes": "",
 "CustomResFormatLoader": "",
-"CustomResFormatSaver": ""
+"CustomResFormatSaver": "",
+"JSONResource": "",
+"JSONResourceLoader": "",
+"JsonResourceSaver": "",
+"PlainTextResource": ""
 }
 
 [application]
@@ -48,4 +66,3 @@ common/enable_pause_aware_picking=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
